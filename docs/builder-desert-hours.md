@@ -6,7 +6,7 @@ Repository: https://github.com/xbill9/desert-hours
 
 Live map: https://d35zkoavyfqlat.cloudfront.net/
 
-Demo video: https://youtu.be/jfC_d6nq2EM
+Demo video: [Watch the demo on YouTube](https://youtu.be/jfC_d6nq2EM)
 
 ---
 
