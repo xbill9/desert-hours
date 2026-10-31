@@ -1,0 +1,17 @@
+Desert Hours: Mapping When Transit Disappears With Amazon Location Service
+
+An hourly map of who can walk to scheduled transit in Mercer County, NJ, built with Amazon Location Service isolines and transit routing, S3 and CloudFront.
+
+What is in it:
+
+- 🟢 6,388 car-free households are out of walking reach at 8 AM, 39.6% of the county's total
+- ❌ 14,095 are out of reach at 3 AM, 87.5% of the total
+- 🟢 Street-based walking areas separate a city grid from a suburb at the same distance
+- ⚠️ Trenton Tract 1 falls from 73% of housing in reach at 8 AM to 0% at 11 PM
+
+dev.to (AWS Community Builders): https://dev.to/aws-builders/desert-hours-mapping-when-transit-disappears-with-amazon-location-service-26m6
+AWS Builder Center: https://builder.aws.com/content/3LTJozsEiM2v6sg7hTziyl13Y58/desert-hours-mapping-when-transit-disappears-with-amazon-location-service
+Medium: https://xbill999.medium.com/desert-hours-mapping-when-transit-disappears-with-amazon-location-service-b7a54969f91a
+Substack: https://xbill9.substack.com/p/desert-hours-mapping-when-transit
+Live demo: https://d35zkoavyfqlat.cloudfront.net/
+Source: https://github.com/xbill9/desert-hours

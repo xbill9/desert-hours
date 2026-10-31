@@ -1,0 +1,7 @@
+builder = https://builder.aws.com/content/3LTJozsEiM2v6sg7hTziyl13Y58/desert-hours-mapping-when-transit-disappears-with-amazon-location-service
+medium = https://xbill999.medium.com/desert-hours-mapping-when-transit-disappears-with-amazon-location-service-b7a54969f91a
+devto-aws = https://dev.to/aws-builders/desert-hours-mapping-when-transit-disappears-with-amazon-location-service-26m6
+substack = https://xbill9.substack.com/p/desert-hours-mapping-when-transit
+linkedin = https://www.linkedin.com/feed/update/urn:li:activity:7522375480327688193/
+live = https://d35zkoavyfqlat.cloudfront.net/
+repo = https://github.com/xbill9/desert-hours

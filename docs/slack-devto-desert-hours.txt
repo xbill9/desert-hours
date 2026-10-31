@@ -1,0 +1,20 @@
+This article provides a step by step guide to building an hourly transit reach map with Amazon Location Service. Walking areas come from Pedestrian isolines, journey times come from Transit routing, and the finished map runs as static files on Amazon S3 and Amazon CloudFront.
+Repository: https://github.com/xbill9/desert-hours
+Live map: https://d35zkoavyfqlat.cloudfront.net/
+
+Builder Center Article is here:
+https://builder.aws.com/content/3LTJozsEiM2v6sg7hTziyl13Y58/desert-hours-mapping-when-transit-disappears-with-amazon-location-service
+
+Medium is here:
+https://xbill999.medium.com/desert-hours-mapping-when-transit-disappears-with-amazon-location-service-b7a54969f91a
+
+Substack is here:
+https://xbill9.substack.com/p/desert-hours-mapping-when-transit
+
+Dev.to is here:
+https://dev.to/aws-builders/desert-hours-mapping-when-transit-disappears-with-amazon-location-service-26m6
+
+Linked In is here:
+https://www.linkedin.com/feed/update/urn:li:activity:7522375480327688193/
+
+#AmazonLocationService #AWS #OpenData #Python
