@@ -1,0 +1,24 @@
+Captured 2026-10-31, aws geo-routes in us-east-1, Mercer County NJ.
+
+Pedestrian isolines, area and farthest vertex from the origin
+Trenton station       600s  0.33 km2  farthest 562 m
+Trenton station       900s  1.03 km2  farthest 842 m
+Trenton station       800m  0.83 km2  farthest 765 m
+Trenton Chambersburg  600s  0.38 km2  farthest 522 m
+Hamilton suburb       600s  0.09 km2  farthest 560 m
+Hamilton suburb       900s  0.17 km2  farthest 810 m
+Hamilton suburb       800m  0.14 km2  farthest 753 m
+Median of all 1,012 stop isolines at 600s: 0.26 km2. 400 m circle: 0.50 km2.
+
+CalculateRoutes Transit, Trenton -74.7548,40.2186 to Princeton -74.6672,40.3495, requested 2026-11-04T02:00:00-05:00
+Summary {'Distance': 22063, 'Duration': 3420}
+Pedestrian departs 03:56 arrives Trenton Transit Center 04:11
+RegionalTrain departs 04:11 arrives Princeton Jct. 04:24
+RegionalTrain departs 04:40 arrives Princeton 04:45
+Pedestrian departs 04:45 arrives 05:09
+
+AWS Price List, us-east-1
+Routes calculated (Core)    $0.50 per thousand
+Isoline calculated (Advanced) $1.50 per thousand
+Map tile $0.04 per thousand
+1,012 isolines; 1,260 journeys

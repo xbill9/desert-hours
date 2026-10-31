@@ -1,0 +1,6 @@
+Derived by code from summary.json and Price List rates, 2026-10-31.
+8 AM: 6388 of 16114 = 39.6%
+11 PM: 8129 of 16114 = 50.4%
+3 AM: 14095 of 16114 = 87.5%
+isolines 1012 x 1.50/1000 = $1.52
+journeys 1260 x 0.50/1000 = $0.63

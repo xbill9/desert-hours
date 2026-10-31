@@ -1,0 +1,203 @@
+{
+ "g": "34021000100",
+ "name": "Tract 1",
+ "muni": "Trenton city",
+ "hh": 1332,
+ "zero": 445,
+ "moe": 227,
+ "cov": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.7281,
+  0.7281,
+  0.7281,
+  0.7281,
+  0.7281,
+  0.7281,
+  0.7281,
+  0.7281,
+  0.7281,
+  0.7281,
+  0.7281,
+  0.7281,
+  0.7281,
+  0.7281,
+  0.7281,
+  0.7281,
+  0.7281,
+  0.7281,
+  0.0
+ ],
+ "dep": [
+  9,
+  3,
+  0,
+  6,
+  3,
+  24,
+  38,
+  56,
+  43,
+  44,
+  40,
+  43,
+  43,
+  40,
+  46,
+  47,
+  44,
+  62,
+  38,
+  46,
+  33,
+  28,
+  18,
+  13
+ ],
+ "local": false,
+ "trips": {
+  "Capital Health Regional Medical Center": {
+   "8": {
+    "min": 52,
+    "wait": 0,
+    "arrive": "8:52 AM",
+    "leave": "8:00 AM",
+    "km": 6.8,
+    "modes": [
+     "Bus"
+    ]
+   },
+   "17": {
+    "min": 54,
+    "wait": 18,
+    "arrive": "5:54 PM",
+    "leave": "5:18 PM",
+    "km": 6.5,
+    "modes": [
+     "Bus",
+     "Bus"
+    ]
+   },
+   "23": {
+    "min": 75,
+    "wait": 27,
+    "arrive": "12:15 AM",
+    "leave": "11:27 PM",
+    "km": 6.8,
+    "modes": [
+     "Bus"
+    ]
+   },
+   "2": {
+    "min": 209,
+    "wait": 160,
+    "arrive": "5:29 AM",
+    "leave": "4:40 AM",
+    "km": 6.8,
+    "modes": [
+     "Bus"
+    ]
+   },
+   "car": {
+    "min": 11,
+    "km": 6.4
+   }
+  },
+  "Trenton Transit Center": {
+   "8": {
+    "min": 49,
+    "wait": 9,
+    "arrive": "8:49 AM",
+    "leave": "8:09 AM",
+    "km": 3.2,
+    "modes": [
+     "Bus"
+    ]
+   },
+   "17": {
+    "min": 37,
+    "wait": 7,
+    "arrive": "5:37 PM",
+    "leave": "5:07 PM",
+    "km": 3.1,
+    "modes": [
+     "LightRail"
+    ]
+   },
+   "23": {
+    "min": 77,
+    "wait": 27,
+    "arrive": "12:17 AM",
+    "leave": "11:27 PM",
+    "km": 3.8,
+    "modes": [
+     "Bus"
+    ]
+   },
+   "2": {
+    "min": 209,
+    "wait": 160,
+    "arrive": "5:29 AM",
+    "leave": "4:40 AM",
+    "km": 3.8,
+    "modes": [
+     "Bus"
+    ]
+   },
+   "car": {
+    "min": 9,
+    "km": 4.3
+   }
+  },
+  "Hamilton Marketplace": {
+   "8": {
+    "min": 65,
+    "wait": 27,
+    "arrive": "9:05 AM",
+    "leave": "8:27 AM",
+    "km": 12.4,
+    "modes": [
+     "Bus",
+     "Bus"
+    ]
+   },
+   "17": {
+    "min": 56,
+    "wait": 4,
+    "arrive": "5:56 PM",
+    "leave": "5:04 PM",
+    "km": 12.8,
+    "modes": [
+     "Bus"
+    ]
+   },
+   "23": {
+    "min": 79,
+    "wait": 30,
+    "arrive": "12:19 AM",
+    "leave": "11:30 PM",
+    "km": 12.8,
+    "modes": [
+     "Bus"
+    ]
+   },
+   "2": {
+    "min": 86,
+    "wait": 37,
+    "arrive": "3:26 AM",
+    "leave": "2:37 AM",
+    "km": 12.8,
+    "modes": [
+     "Bus"
+    ]
+   },
+   "car": {
+    "min": 12,
+    "km": 13.3
+   }
+  }
+ }
+}
