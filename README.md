@@ -17,3 +17,12 @@ Car-free households out of reach: 6,388 of 16,114 at 8 AM, 14,095 at 3 AM.
 Inputs go in `data/raw`, which is not committed: NJ TRANSIT GTFS, Census Reporter table B08201, TIGER tract, county subdivision and 2020 block files, and Mercer County's Route 130 stop layer. Python packages: `pyshp`, `shapely`. `site/config.js` holds the map key and is not committed; the key is limited to `geo-maps` actions and this site's domain.
 
 Scheduled service only; may be incomplete, inaccurate or out of date. Independent of NJ TRANSIT. Code is Apache-2.0.
+
+## Published
+
+- [Hackathon project](https://builder.aws.com/project/3LTMjXIt3YXdvj88Ot6ToXrWgsL/desert-hours-mapping-when-transit-disappears)
+- [Builder Center article](https://builder.aws.com/content/3LTJozsEiM2v6sg7hTziyl13Y58/desert-hours-mapping-when-transit-disappears-with-amazon-location-service)
+- [dev.to](https://dev.to/aws-builders/desert-hours-mapping-when-transit-disappears-with-amazon-location-service-26m6)
+- [Medium](https://xbill999.medium.com/desert-hours-mapping-when-transit-disappears-with-amazon-location-service-b7a54969f91a)
+- [Substack](https://xbill9.substack.com/p/desert-hours-mapping-when-transit)
+- [Demo video](https://youtu.be/jfC_d6nq2EM)
