@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Desert Hours: Mercer County transit after dark</title>
+<meta name="description" content="An hourly map of who can walk to scheduled transit in Mercer County, NJ. 6,388 car-free households are out of reach at 8 AM and 14,095 at 3 AM.">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <h1>Desert Hours</h1>
+  <p class="lede">Transit deserts open and close through the day. In Mercer County, New Jersey, <strong>6,388</strong> car-free households are out of walking reach of scheduled service at 8 AM. By 3 AM it is <strong>14,095</strong>.</p>
+</header>
+
+<main>
+<section class="app" aria-label="Interactive map">
+  <div id="map" role="application" aria-label="Map of Mercer County census tracts shaded by transit reach"></div>
+  <div class="clock">
+    <div class="clockhead">
+      <button id="play" type="button" aria-label="Play through the day">▶</button>
+      <output id="hourlabel" for="hour">8 AM</output>
+      <div class="big"><span id="bignum">6,388</span> <small>car-free households out of reach</small></div>
+    </div>
+    <input id="hour" type="range" min="5" max="28" step="1" value="8" aria-label="Hour of day">
+    <div class="ticks"><span>5 AM</span><span>Noon</span><span>6 PM</span><span>Midnight</span><span>4 AM</span></div>
+    <div id="chart" aria-hidden="true"></div>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--reach)"></i>10-minute walk to service</span>
+      <span class="ramp"><i></i><b>Tract households out of reach: 0% to 100%</b></span>
+    </div>
+  </div>
+  <aside id="panel" aria-live="polite">
+    <p class="hint">Click a tract to see its day. Start with <button class="link" id="story" type="button">Trenton Tract 1</button>.</p>
+  </aside>
+</section>
+
+<section class="copy">
+<h2>The same place at different hours</h2>
+<p>Trenton Tract 1 has about 445 car-free households out of 1,332 (margin ±227). At 8 AM, 73% of its housing is within a 10-minute walk of a running service. At 11 PM it is 0%. Capital Health Regional Medical Center is an 11-minute drive from the tract. Leaving at 8 AM by transit takes 52 minutes. Leaving at 2 AM takes 3 hours 29 minutes, because the first practical trip sets out at 4:40 AM.</p>
+
+<h2>Car-free households out of reach, by municipality</h2>
+<table>
+<thead><tr><th>Municipality</th><th>Car-free households</th><th>8 AM</th><th>11 PM</th><th>3 AM</th></tr></thead>
+<tbody><tr><td>Trenton city</td><td>8,554</td><td>878</td><td>1,930</td><td>6,833</td></tr><tr><td>Hamilton township</td><td>2,632</td><td>1,827</td><td>1,985</td><td>2,368</td></tr><tr><td>Princeton</td><td>1,108</td><td>657</td><td>817</td><td>1,108</td></tr><tr><td>Ewing township</td><td>892</td><td>537</td><td>738</td><td>892</td></tr><tr><td>East Windsor township</td><td>821</td><td>806</td><td>821</td><td>806</td></tr><tr><td>Lawrence township</td><td>781</td><td>551</td><td>596</td><td>781</td></tr><tr><td>West Windsor township</td><td>769</td><td>698</td><td>765</td><td>769</td></tr><tr><td>Robbinsville township</td><td>212</td><td>116</td><td>132</td><td>211</td></tr><tr><td>Hopewell township</td><td>144</td><td>144</td><td>144</td><td>144</td></tr><tr><td>Hightstown borough</td><td>126</td><td>107</td><td>126</td><td>107</td></tr><tr><td>Pennington borough</td><td>47</td><td>37</td><td>47</td><td>47</td></tr><tr><td>Hopewell borough</td><td>28</td><td>28</td><td>28</td><td>28</td></tr></tbody>
+<tfoot><tr><th>County</th><th>16,114</th><th>6,388</th><th>8,129</th><th>14,095</th></tr></tfoot>
+</table>
+
+<h2>County reach through the day</h2>
+<details><summary>Hour by hour</summary>
+<table><thead><tr><th>Hour</th><th>Out of reach</th><th>Share</th><th>Scheduled departures</th></tr></thead><tbody><tr><td>5 AM</td><td>6,851</td><td>42.5%</td><td>1,003</td></tr><tr><td>6 AM</td><td>6,534</td><td>40.5%</td><td>1,902</td></tr><tr><td>7 AM</td><td>6,485</td><td>40.2%</td><td>2,001</td></tr><tr><td>8 AM</td><td>6,388</td><td>39.6%</td><td>1,947</td></tr><tr><td>9 AM</td><td>6,469</td><td>40.1%</td><td>1,886</td></tr><tr><td>10 AM</td><td>6,426</td><td>39.9%</td><td>1,781</td></tr><tr><td>11 AM</td><td>6,432</td><td>39.9%</td><td>1,751</td></tr><tr><td>Noon</td><td>6,422</td><td>39.9%</td><td>1,794</td></tr><tr><td>1 PM</td><td>6,422</td><td>39.9%</td><td>1,746</td></tr><tr><td>2 PM</td><td>6,432</td><td>39.9%</td><td>1,848</td></tr><tr><td>3 PM</td><td>6,421</td><td>39.8%</td><td>1,888</td></tr><tr><td>4 PM</td><td>6,408</td><td>39.8%</td><td>1,966</td></tr><tr><td>5 PM</td><td>6,389</td><td>39.6%</td><td>2,054</td></tr><tr><td>6 PM</td><td>6,338</td><td>39.3%</td><td>1,944</td></tr><tr><td>7 PM</td><td>6,400</td><td>39.7%</td><td>1,712</td></tr><tr><td>8 PM</td><td>6,486</td><td>40.3%</td><td>1,254</td></tr><tr><td>9 PM</td><td>6,606</td><td>41.0%</td><td>1,034</td></tr><tr><td>10 PM</td><td>6,635</td><td>41.2%</td><td>982</td></tr><tr><td>11 PM</td><td>8,129</td><td>50.4%</td><td>617</td></tr><tr><td>Midnight</td><td>9,904</td><td>61.5%</td><td>396</td></tr><tr><td>1 AM</td><td>10,968</td><td>68.1%</td><td>176</td></tr><tr><td>2 AM</td><td>13,951</td><td>86.6%</td><td>47</td></tr><tr><td>3 AM</td><td>14,095</td><td>87.5%</td><td>68</td></tr><tr><td>4 AM</td><td>13,195</td><td>81.9%</td><td>107</td></tr></tbody></table>
+</details>
+
+<h2>The data</h2>
+<ul>
+<li><strong>Schedules:</strong> NJ TRANSIT bus and rail GTFS for Wednesday, November 4, 2026, from the Mobility Database archive. Counted per stop, per hour, in the county and within 1.5 km of it.</li>
+<li><strong>Car-free households:</strong> American Community Survey table B08201, ACS 2024 5-year, through Census Reporter. 16,114 of 144,114 households across 84 tracts.</li>
+<li><strong>Where people live:</strong> 2020 Census block housing counts. Tract totals are spread across blocks by housing units, which assumes car-free households are spread like housing.</li>
+<li><strong>Route 130 Connection:</strong> stops from Mercer County's public route layer, active in hours with a departure in the September 2023 timetable. Every stop counts in every such hour, which favors the route.</li>
+</ul>
+
+<h2>How it is mapped, and why Amazon Location</h2>
+<ul>
+<li><strong>Amazon Location Pedestrian isolines</strong> give a 10-minute walk from each of 1,012 stops along the street network, so a suburb with long blocks gets the smaller area it really has. Each hour's service area is the union of the stops running in that hour.</li>
+<li><strong>Amazon Location Routes</strong> supplies the transit and driving times in each tract's journey table, from one point inside the tract at each departure time.</li>
+<li><strong>Amazon Location Maps</strong> draws the base map through MapLibre. Everything is precomputed and served from Amazon S3 through CloudFront.</li>
+</ul>
+
+<h2>What to keep in mind</h2>
+<ul>
+<li>This map shows scheduled service. It may be incomplete, inaccurate or out of date, and is not for trip planning. Check with the operator.</li>
+<li>Not included: Princeton University TigerTransit, the Princeton municipal shuttle, the Mercer Z-Line and on-demand or paratransit services. Reach is understated where they run.</li>
+<li>Journey times come from Amazon Location's transit data, which may not include the Route 130 Connection. "No route" means Amazon Location returned none.</li>
+<li>Tract estimates carry wide margins. Household counts here are modeled estimates.</li>
+<li>Service is counted by scheduled departure hour for one weekday. The 10-minute walk is at Amazon Location's walking pace of about 1 m/s measured from its results here.</li>
+</ul>
+<p class="foot">Independent project, not affiliated with or endorsed by NJ TRANSIT. Built for the AWS Builder Center Weekend Challenge: Map It.</p>
+</section>
+</main>
+<script src="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
