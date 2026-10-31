@@ -9,7 +9,7 @@ A transit desert can open and close in a single day. In Mercer County, New Jerse
 
 **Live map:** https://d35zkoavyfqlat.cloudfront.net/
 
-**Demo video:** VIDEO_URL
+**Demo video:** https://youtu.be/jfC_d6nq2EM
 
 #### What You Can Explore
 
@@ -87,6 +87,7 @@ The map shows scheduled service for one weekday and may be incomplete, inaccurat
 #### References
 
 - [Live map](https://d35zkoavyfqlat.cloudfront.net/)
+- [Code on GitHub](https://github.com/xbill9/desert-hours)
 - [Amazon Location Service CalculateIsolines](https://docs.aws.amazon.com/location/latest/APIReference/API_CalculateIsolines.html)
 - [Amazon Location Service CalculateRoutes](https://docs.aws.amazon.com/location/latest/APIReference/API_CalculateRoutes.html)
 - [Transit Deserts method](https://transitdeserts.info/about.html)
