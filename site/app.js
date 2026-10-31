@@ -102,22 +102,22 @@ map.on("load", async () => {
   state.summary = summary;
   const firstLabel = map.getStyle().layers.find((l) => l.type === "symbol");
   const before = firstLabel ? firstLabel.id : undefined;
-  map.addSource("tracts", { type: "geojson", data: tracts, promoteId: "g" });
+  map.addSource("tracts", { type: "geojson", data: tracts });
   map.addLayer({ id: "tracts", type: "fill", source: "tracts", paint: { "fill-opacity": 0.72 } }, before);
   map.addSource("reach", { type: "geojson", data: "data/reach.geojson" });
   map.addLayer({ id: "reach", type: "fill", source: "reach", paint: { "fill-color": "#4fb3d9", "fill-opacity": 0.65 } }, before);
   map.addLayer({ id: "lines", type: "line", source: "tracts", paint: { "line-color": "#101418", "line-width": 0.7 } }, before);
-  map.addLayer({ id: "pick", type: "line", source: "tracts", paint: { "line-color": "#ffffff", "line-width": 2.5 }, filter: ["==", ["to-string", ["id"]], ""] });
+  map.addLayer({ id: "pick", type: "line", source: "tracts", paint: { "line-color": "#ffffff", "line-width": 2.5 }, filter: ["==", ["get", "g"], ""] });
   const b = new maplibregl.LngLatBounds();
   tracts.features.forEach((f) => (f.geometry.coordinates.flat(Infinity).length ? f.geometry.coordinates.flat(f.geometry.type === "Polygon" ? 1 : 2).forEach((c) => b.extend(c)) : 0));
   map.fitBounds(b, { padding: 20, duration: 0 });
   const select = (p) => {
     state.tract = p;
-    map.setFilter("pick", ["==", ["to-string", ["id"]], p.g]);
+    map.setFilter("pick", ["==", ["get", "g"], p.g]);
     showTract(p);
   };
   const byId = Object.fromEntries(tracts.features.map((f) => [f.properties.g, f.properties]));
-  map.on("click", "tracts", (e) => select(byId[e.features[0].id]));
+  map.on("click", "tracts", (e) => select(byId[e.features[0].properties.g]));
   map.on("mouseenter", "tracts", () => (map.getCanvas().style.cursor = "pointer"));
   map.on("mouseleave", "tracts", () => (map.getCanvas().style.cursor = ""));
   $("story").addEventListener("click", () => {
